@@ -1,2 +1,2 @@
 # ignite
-Projetos feitos durante o curso FullStack da RocketSeat em 2023 :)
+Projetos desenvolvidos durante o curso FullStack da RocketSeat em 2023 :)
