@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cookie": "^8.3.0",
     "dotenv": "^16.0.3",
     "fastify": "^4.14.1",
     "knex": "^2.4.2",
