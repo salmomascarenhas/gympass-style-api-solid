@@ -6,9 +6,10 @@ app.get('/', () => {
     console.log('Hello World!')
 })
 
-app.listen({
-    port: 3333,
-
-}).then(() => {
-    console.log('HTTP Server Running!')
-})
+app
+    .listen({
+        port: 3333,
+    })
+    .then(() => {
+        console.log('HTTP Server Running!')
+    })
