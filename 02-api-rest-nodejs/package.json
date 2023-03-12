@@ -7,6 +7,7 @@
     "dev": "tsx watch src/server.ts ",
     "lint": "eslint --ext .ts --fix src/",
     "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
+    "build": "tsup src --out-dir build",
     "test": "vitest"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
     "@rocketseat/eslint-config": "^1.2.0",
     "@types/node": "^18.15.0",
     "@types/supertest": "^2.0.12",
+    "tsup": "^6.5.0",
     "eslint": "^8.36.0",
     "supertest": "^6.3.3",
     "tsx": "^3.12.3",
