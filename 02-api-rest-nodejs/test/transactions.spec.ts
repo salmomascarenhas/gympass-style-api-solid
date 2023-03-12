@@ -67,7 +67,6 @@ describe('Transactions routes', () => {
             .set('Cookie', cookies)
             .expect(200)
 
-        console.log(listTransactionResponse)
         const transactionId = listTransactionResponse.body.transactions[0].id
 
         const getTransactionResponse = await request(app.server)
@@ -81,6 +80,37 @@ describe('Transactions routes', () => {
                 amount: 5000
             })
         )
+
+    })
+
+    it('Should be able to get summary', async () => {
+        const createTransactionResponse = await request(app.server)
+            .post('/transactions').send({
+                title: 'New Transaction',
+                amount: 5000,
+                type: 'credit'
+            })
+
+        const cookies = createTransactionResponse.get('Set-Cookie')
+
+        await request(app.server)
+            .post('/transactions')
+            .set('Cookie', cookies)
+            .send({
+                title: 'New Transaction',
+                amount: 3000,
+                type: 'debit'
+            })
+
+        const summaryResponse = await request(app.server)
+            .get('/transactions/summary')
+            .set('Cookie', cookies)
+            .expect(200)
+
+
+        expect(summaryResponse.body.summary).toEqual({
+            amount: 2000
+        })
 
     })
 })
