@@ -1,0 +1,4 @@
+/db/*.db
+.env.test
+node_modules
+build
