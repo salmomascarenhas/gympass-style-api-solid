@@ -1,0 +1,23 @@
+{
+  "name": "03-api-solid",
+  "version": "1.0.0",
+  "description": "## RFs (Requisitos funcionais) O usuário vai fazer X na aplicação.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx watch ./src/servet.ts",
+    "start:prod": "node ./build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18.15.2",
+    "tsup": "6.6.3",
+    "tsx": "3.12.5",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "fastify": "4.14.1"
+  }
+}
