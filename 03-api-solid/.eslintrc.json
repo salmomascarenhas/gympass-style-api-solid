@@ -3,6 +3,7 @@
         "@rocketseat/eslint-config/node"
     ],
     "rules": {
-        "prettier/prettier": "off"
+        "prettier/prettier": "off",
+        "camelcase": "off"
     }
 }
