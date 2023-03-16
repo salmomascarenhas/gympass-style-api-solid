@@ -4,6 +4,7 @@
     ],
     "rules": {
         "prettier/prettier": "off",
-        "camelcase": "off"
+        "camelcase": "off",
+        "no-useless-constructor": "off"
     }
 }
