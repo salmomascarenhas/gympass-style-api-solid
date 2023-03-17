@@ -4,8 +4,9 @@ export class InMemoryUsersRepository implements UsersRepository {
     public items: User[] = []
 
     async findByEmail(email: string) {
-        const user = this.items.find(user => user.email === email)
+        const user = this.items.find((item) => item.email === email)
 
+        console.log(user)
         if (!user)
             return null
 
@@ -22,7 +23,8 @@ export class InMemoryUsersRepository implements UsersRepository {
         }
 
         this.items.push(user)
-
+        console.log('+++++++create++++++++')
+        console.log(this.items)
         return user
     }
 

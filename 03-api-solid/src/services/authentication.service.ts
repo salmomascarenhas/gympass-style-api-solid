@@ -13,9 +13,7 @@ interface AutheticationServiceResponse {
 }
 
 export class AutheticationService {
-    constructor(
-        private usersRepository: UsersRepository
-    ) { }
+    constructor(private usersRepository: UsersRepository) { }
 
     async execute({
         email,
@@ -27,10 +25,11 @@ export class AutheticationService {
             throw new InvalidCredentialsError()
         }
 
-        const doesPasswordMatches = await compare(user.password_hash, password)
+        const doesPasswordMatches = await compare(password, user.password_hash,)
 
-        if (!doesPasswordMatches)
+        if (!doesPasswordMatches) {
             throw new InvalidCredentialsError()
+        }
 
         return { user }
     }
