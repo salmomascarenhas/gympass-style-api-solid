@@ -21,7 +21,8 @@ describe('CheckIn Service', () => {
             description: '',
             phone: '',
             latitude: new Decimal(-3.7358774),
-            longitute: new Decimal(-41.0091473)
+            longitude: new Decimal(-41.0091473),
+            created_at: new Date()
 
         })
 
@@ -92,7 +93,9 @@ describe('CheckIn Service', () => {
             description: '',
             phone: '',
             latitude: new Decimal(-3.6777296081087285),
-            longitute: new Decimal(-40.968637630135966)
+            longitude: new Decimal(-40.968637630135966),
+            created_at: new Date()
+
 
         })
 

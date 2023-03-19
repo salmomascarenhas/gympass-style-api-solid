@@ -32,7 +32,7 @@ export class CheckInService {
 
         const distance = getDistanceBetwheenCoordinates(
             { latitude: userLatitude, longitude: userLongitude },
-            { latitude: gym.latitude.toNumber(), longitude: gym.longitute.toNumber() })
+            { latitude: gym.latitude.toNumber(), longitude: gym.longitude.toNumber() })
 
         console.log('distance')
         console.log(distance)
