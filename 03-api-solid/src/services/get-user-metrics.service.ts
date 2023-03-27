@@ -7,7 +7,7 @@ interface GetUserMetricsResponse {
     userMetrics: number
 }
 
-export class GetUserMetrics {
+export class GetUserMetricsService {
     constructor(
         private checkInsRepository: CheckInsRepository,) { }
 
