@@ -1,5 +1,5 @@
 # GymPass Style App
-API similiar ao Gympass (filial de academias) desenvolvido utilizando princípios SOLID.
+API similar ao Gympass (filial de academias) desenvolvido utilizando princípios SOLID.
 
 
 ## RFs (Requisitos funcionais)
