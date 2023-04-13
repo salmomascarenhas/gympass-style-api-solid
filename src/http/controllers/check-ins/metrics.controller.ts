@@ -1,5 +1,5 @@
+import { makeGetUserMetricsService } from '@/services/factories/make-get-user-metrics-service'
 import { FastifyReply, FastifyRequest } from 'fastify'
-import { makeGetUserMetricsService } from '../../../services/factories/make-get-user-metrics-service'
 
 export async function metricsController(request: FastifyRequest, reply: FastifyReply) {
     const getUserMetricsService = makeGetUserMetricsService()

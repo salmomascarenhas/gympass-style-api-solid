@@ -1,17 +1,20 @@
-import fastfy from 'fastify'
-import { ZodError } from 'zod'
-import { env } from './env'
 import fastifyJwt from '@fastify/jwt'
-import { usersRoutes } from './http/controllers/users/routes'
-import { gymsRoutes } from './http/controllers/gyms/routes'
+import fastify from 'fastify'
+import { ZodError } from 'zod'
+import { env } from '@/env'
+import { usersRoutes } from '@/http/controllers/users/routes'
+import { gymsRoutes } from '@/http/controllers/gyms/routes'
+import { checkInsRoutes } from './http/controllers/check-ins/routes'
 
-export const app = fastfy()
+export const app = fastify()
 
 app.register(fastifyJwt, {
     secret: env.JWT_SECRET,
 })
+
 app.register(usersRoutes)
 app.register(gymsRoutes)
+app.register(checkInsRoutes)
 
 app.setErrorHandler((error, _, reply) => {
     if (error instanceof ZodError) {
@@ -23,7 +26,7 @@ app.setErrorHandler((error, _, reply) => {
     if (env.NODE_ENV !== 'prod') {
         console.error(error)
     } else {
-        // TODO: Here we should log to an external tool like DataDog/NewRelic/Sentry.
+        // TODO: Here we should log to a external tool like DataDog/NewRelic/Sentry
     }
 
     return reply.status(500).send({ message: 'Internal server error.' })

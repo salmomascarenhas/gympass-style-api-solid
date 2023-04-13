@@ -1,6 +1,6 @@
-import { z } from 'zod'
+import { makeValidateCheckInService } from '@/services/factories/validate-check-in-service'
 import { FastifyReply, FastifyRequest } from 'fastify'
-import { makeValidateCheckInService } from '../../../services/factories/validate-check-in-service'
+import { z } from 'zod'
 
 export async function validateController(request: FastifyRequest, reply: FastifyReply) {
     const validateCheckInParamsSchema = z.object({

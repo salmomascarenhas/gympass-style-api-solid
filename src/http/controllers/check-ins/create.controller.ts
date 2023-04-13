@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { FastifyReply, FastifyRequest } from 'fastify'
+import { z } from 'zod'
 import { makeCheckInService } from '@/services/factories/make-check-in-service'
 
 export async function createController(request: FastifyRequest, reply: FastifyReply) {
@@ -19,9 +19,9 @@ export async function createController(request: FastifyRequest, reply: FastifyRe
     const { gymId } = createCheckInParamsSchema.parse(request.params)
     const { latitude, longitude } = createCheckInBodySchema.parse(request.body)
 
-    const checkInUseCase = makeCheckInService()
+    const checkInService = makeCheckInService()
 
-    await checkInUseCase.execute({
+    await checkInService.execute({
         gymId,
         userId: request.user.sub,
         userLatitude: latitude,

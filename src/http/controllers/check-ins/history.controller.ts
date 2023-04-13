@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { FastifyReply, FastifyRequest } from 'fastify'
+import { z } from 'zod'
 import { makeFetchUserCheckInsHistoryService } from '@/services/factories/make-fetch-user-check-ins-history-service'
 
 export async function historyController(request: FastifyRequest, reply: FastifyReply) {
