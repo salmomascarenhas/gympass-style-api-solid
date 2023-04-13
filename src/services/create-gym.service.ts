@@ -4,7 +4,7 @@ import { GymsRepository } from '../repositories/gyms.repository'
 interface CreateGymServiceRequest {
     title: string
     description: string | null
-    phone: string
+    phone: string | null
     latitude: number
     longitude: number
 }
