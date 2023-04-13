@@ -1,2 +1,2 @@
-# ignite
-Projetos desenvolvidos durante o curso FullStack da RocketSeat em 2023 :)
+# API Gym SOLID
+API de sistemas de academias filiais (similiar ao Gympass) desenvolvido utilizando princípios SOLID.
