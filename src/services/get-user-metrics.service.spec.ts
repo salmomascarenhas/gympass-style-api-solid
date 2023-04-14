@@ -23,11 +23,11 @@ describe('Get User Metrics Service', () => {
             user_id: 'user-01'
         })
 
-        const { userMetrics } = await sut.execute({
+        const { checkInsCount } = await sut.execute({
             userId: 'user-01'
         })
 
-        expect(userMetrics).toEqual(2)
+        expect(checkInsCount).toEqual(2)
 
     })
 
