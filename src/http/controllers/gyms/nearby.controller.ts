@@ -2,7 +2,7 @@ import { makeFetchNearbyGymsService } from '@/services/factories/make-fetch-near
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
-export async function nearby(request: FastifyRequest, reply: FastifyReply) {
+export async function nearbyController(request: FastifyRequest, reply: FastifyReply) {
     const nearbyGymsQuerySchema = z.object({
         latitude: z.coerce.number().refine((value) => {
             return Math.abs(value) <= 90
